@@ -4,17 +4,20 @@ set nocompatible
 " mouse - default "", "a" for GUI and Win32
 " mouse=r - do not generate VISUAL when select by mouse=a, also not generate indent error by mouse= 
 set mouse=r
+set paste
 
 " tab
 " a tab takes 4-spaces-wide
 set tabstop=4
 " a indent takes 4-spaces-wide
 set shiftwidth=4
+" smartly decide indent a tab or 4 spaces
+" backspace will unindent 4-space-wide
+set smarttab
 " a tab consist of 4 spaces
 set expandtab
 " or not use space instead of tab
 "set noexpandtab
-set smarttab
 " this is for tab party,disable it
 set softtabstop=0
 
