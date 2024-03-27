@@ -7,19 +7,22 @@ set mouse=r
 set paste
 
 " tab
-" a tab takes 4-spaces-wide
+" defines how much space width equals one tab -> this decide how long a tab looks like
+" a tab takes 4-spaces-wide -> default 8
 set tabstop=4
-" a indent takes 4-spaces-wide
+" defines how much space is inserted in file when tab pressed -> this decide how many spaces is inserted by press tab or removed by press backspace
+" softtabstop=0 && noexpandtab -> a tab just a tab
+set softtabstop=4
+" this decide how long a indent is -> when shiftwidth=8 && tabstop=4 && noexpandtab, when tab pressed, two 0x09 is inserted in file
+" a indent takes 4-spaces-wide -> default 8
 set shiftwidth=4
 " smartly decide indent a tab or 4 spaces
 " backspace will unindent 4-space-wide
 set smarttab
-" a tab consist of 4 spaces
+" a tab consist of 4 spaces -> when tabstop=4 softtabstop=4 shiftwidth=4 expandtab, when tab pressed four 0x20 is inserted in file
 set expandtab
 " or not use space instead of tab
 "set noexpandtab
-" this is for tab party,disable it
-set softtabstop=0
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
